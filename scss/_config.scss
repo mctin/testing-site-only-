@@ -1,0 +1,11 @@
+$primaire-color:#9356DC;
+$secondaire-color:#ff79da;
+$tertiaire-color:#99E2D0;
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+@mixin transition-ease {
+    transition: all 0.05s ease-in-out;
+}
