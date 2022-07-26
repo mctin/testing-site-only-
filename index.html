@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="normalise" href="css/normalise.css">
     <link rel="stylesheet" href="scss/main.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Ohmyfood</title>
 </head>
 <body>
@@ -26,48 +30,80 @@
             />
           </form>
         </div>
-    
         <div class="reservez">    
         <h2>Réserver le menu qui vous convient</h2>
         <h3>Découvrez des restaurants d'exception, séléctionné par nos soins.</h3>
         <button class="explorer-btn_resto">Explorer nos restaurants</button>
         </div>
-    </section>
-<section class="fonctionnement">
+<section id="fonctionnement"> 
+    <div class="homeSection">
     <h2>Fonctionnement</h2>
-    <div class="button_link">
-    <span><i class="fa-solid fa-circle-1 fa x2"></i> 
-    <a href="#!" class="button_link--choisissez">Choisissez au restaurant</a> </span>
+    <div class="gridList">
+        <article class="orderCard">
+            <div class="orderNumber">1</div>
+            <span class="orderIcon material-icons">phone_iphone</span>
+            <h3 class="orderText">Choisissez un restaurant</h3>
+        </article>
+        <article class="orderCard">
+            <div class="orderNumber">2</div>
+            <span class="orderIcon material-icons">list</span>
+            <h3 class="orderText">Composez votre menu</h3>
+        </article>
+        <article class="orderCard pinkOrderCard">
+            <div class="orderNumber">3</div>
+            <span class="orderIcon purpleOrderIcon material-icons">storefront</span>
+            <h3 class="orderText">Dégustez au restaurant</h3>
+        </article>
+        </div>
     </div>
-    <div class="button_link">
-        <span class="button_link--composez">Composez votre menu</span>
-    <div class="button_link">
-        <span class="button_link--degustez">Dégustez au restaurant</span>
-    </div>
+</div>
 </section>
-<section class="restaurants">
-    <h2 class="restaurant_title">Restaurants</h2>
-    <div class="restaurant_cards">
-        <a href="page_menu/La palette du goût">
-            <div class="restaurant_card">
-                <div class="restaurant_card_image">
-                    <div class="restaurant_card_new"><p>Nouveau</p></div>
-        <img src="images/restaurants/"
+    <section id="restaurants" class="restaurantSection">
+        <div class="sectionTitle"> <h2>Restaurants</h2></div>
+        <div class="restoList">
+            <a href="source/la-palette-du-gout.html" class="restaurantItem">
+                <img class="restaurantImage" src="images/restaurants/la palette.jpg" alt="La palette du goût">
+                <div class="tag">Nouveau</div>
+                <section class="restaurantInfo">
+                    <div class="restaurantText">
+                        <h3 class="restaurantName">La palette du goût</h3>
+                        <p class="restaurantLocation">Ménilmontant</p></div>
+                    <div class="heart"><i class="far fa-heart"></i></div>
+                </section>
+            </a>
+            <a href="source/la-note-enchantée.html" class="restaurantItem">
+                <img class="restaurantImage" src="images/restaurants/la note.jpg" alt="La note eenchantee">
+                <div class="tag">Nouveau</div>
+                <section class="restaurantInfo">
+                    <div class="restaurantText">
+                        <h3 class="restaurantName">La note enchantée</h3>
+                        <p class="restaurantLocation">Charonne</p></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                </section>
+            </a>
+            <a href="source/a-la-francaise.html" class="restaurantItem">
+                <img class="restaurantImage" src="images/restaurants/la francais.jpg" alt="a la francaise">
+                <div class="tag">Nouveau</div>
+                <section class="restaurantInfo">
+                    <div class="restaurantText">
+                        <h3 class="restaurantName">A la française</h3>
+                        <p class="restaurantLocation">Cité Rouge</p></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+                 </section>
+            </a>
+            <a href="source/le-delice-des-sens.html" class="restaurantItem">
+                <img class="restaurantImage" src="images/restaurants/le delice.jpg" alt="Le delice des sens">
+                <div class="tag">Nouveau</div>
+                <section class="restaurantInfo">
+                    <div class="restaurantText">
+                        <h3 class="restaurantName">Le délice des sens</h3>
+                        <p class="restaurantLocation">Folie Méricourt</p></div>
+                        <div class="heart"><i class="far fa-heart"></i></div>
+              </section>
+            </a>             
+    </section>
     </div>
-        <ul class= "restaurant-list">
-            <li class= "site-list_item active"></li>
-            <a href="index.html"> Home</a>
-            <li class= "site-list_item"></li>
-            <a href="lapalette.html" > La palette du goût</a>
-            <li class= "site-list_item"></li>
-            <a href="lanote.html">La note enchantée</a>
-            <li class= "site-list_item"></li>
-            <a href="alafrancaise.html">À la française</a>
-            <li class= "site-list_item"></li>
-            <a href="ledelice.html">Le délice des sens</a>
-        </ul>
-    </nav>
-</section>
+</div>
 </main>
         <footer>
             <nav class="nav">

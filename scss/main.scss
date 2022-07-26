@@ -1,46 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,500;1,900&family=Shrikhand&display=swap');
 @import 'config';
+@import 'icons';
 
 body {
     background-color: white;
     color: black;
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "roboto", sans-serif;
     line-height: 1;
 }
-
 h1 {
-    font-family: "roboto";
-    font-size:32px;
+    font-family: "roboto", sans-serif;
+    font-size:3rem;
+    font-weight: 300;
 }
 h2{
-    font-family: "roboto";
-    font-size:20px;
+    font-family: "roboto", sans-serif;
+    font-size:1.6rem;
+    font-weight: 400;
 }
-h3 {
-    font-family: "roboto";
-    font-size:15Px;
+h3{
+    font-family: "roboto", sans-serif;
+    font-size:1.4rem;
+    font-weight: 300;
 }
-
+p {
+    font-family: 'roboto';
+    font-size:1.4rem;
+    font-weight: 200;
+}
 a {
-    color:aquamarine;
+    color:black;
     text-decoration:none;
 }
-
 header{
     width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.reservez{
+.homeSection{
     display: flexbox;
-    flex-direction: column;
+    margin:10px;
+}
+.reservez{
     align-items: center;
     background-color:rgb(235, 234, 227);
     text-align: center;
-    padding-bottom: 20px;
+    padding: 20px 0px 0px 0px;
+    h2 {
+        padding:10px;
+    }
+    h3 {
+        padding-top: 10px;
+    }
 }
 .social-icons{
        position:fixed;
@@ -54,7 +67,6 @@ header{
         }
     }
 }
-
 .search-form{
     display: flex;
     flex-direction: column;
@@ -74,30 +86,223 @@ header{
     }
 }
 .explorer-btn_resto{
-        background-color:$secondaire-color;
-        border: none;
         color: white;
+        padding: 1.5rem 3rem;
         text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        align-items: center;
-        padding: 12px 12px 12px 12px;
-        border-radius: 50px;
-}
-.fonctionnement{
+        background: #ff79da;
+        background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+        width: min-content;
+        white-space: nowrap;
+        margin: 4rem auto;
+        border-radius: 30px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        border-width: 0px;
+        font-family: "roboto", sans-serif;
+        font-size:1.4rem;
+        font-weight: 300;
+    }
+.fonctionnement {
     display: flex;
     flex-direction: column;
 }
+.restoList {
+    display: flex;
+    flex-direction: column;
+    row-gap:2rem;
+    align-items: center;
+}
+.orderCard {
+    background: #f6f6f6;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0) 0px 5px 20px 0px, rgba(0, 0, 0, 0.3) -1px 5px 30px -10px;
+    border-radius: 2rem;
+    margin-left: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.orderCard .orderNumber {
+    background: #9356dc;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    left: -1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orderCard .orderIcon {
+    color: #7e7e7e;
+}
+.orderCard.pinkOrderCard {
+    background: #f5edff;
+}  
+.restaurantSection {
+    background: #f6f6f6;
+}
+.homeSection {
+    padding: 6rem 2rem;
+}
+.homeSection .sectionTitle {
+    margin-bottom: 2rem;
+}   
+.restaurantItem {
+    width: 100%;
+    min-width: 2.3rem;
+    border-radius: 2rem;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    cursor: pointer;
+    vertical-align: inherit;
+    position: relative;
+    transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.restaurantItem:hover {
+    filter: brightness(1.1);
+    box-shadow: rgb(50 50 93 / 25%) 0px 30px 60px -12px, rgb(0 0 0 / 30%) 0px 18px 36px -18px;
+}
+.restaurantItem .restaurantInfo {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.restaurantItem .restaurantName {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+.restaurantImage{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2rem 2rem 0 0;
+}
+.tag {
+    background: #a9e0d1;
+    color: #3b8468;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+.restaurantItem .restaurantName {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+
+}
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.allMenus {
+    display: flex;
+    flex-direction: column;
+}
+.menuCategoryTitle {
+
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+}
+.menuRestaurantImage {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+.menuCategoryTitle::after {
+    content: "";
+    width: 5rem;
+    height: 0.5rem;
+    background-color: #99e2d0;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+}
+
+.menuItem {
+    background: white;
+    height: 7rem;
+    border-radius: 15px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    display: flex;
+    animation: slideup 1s forwards;
+    opacity: 100;
+}
+.menuItem .menuInfo {
+    padding: 1.5rem;
+    max-width: 100%;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}  
+.header .backLink {
+    margin-left: 2rem;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.header .headerLogo {
+    margin: auto;
+    height: 3rem;
+}
+//@extend {
+  //  padding: 4rem;
+  //  border-radius: 0;
+
+.menuWrapper {
+    width: 100%;
+    border-radius: 4rem 4rem 0 0;
+    background: whitesmoke;
+    padding: 2rem;
+    position: relative;
+    margin-top: -4rem;
+}
+//@media (min-width: 600px)
+//.menuHeader {
+   // justify-content: center;
+
+.menuHeader {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+//@media (min-width: 600px)
+//.menuRestaurantTitle {
+ //   font-size: 3.5rem;
+.menuRestaurantTitle {
+    font-family: "Shrikhand", cursive;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
 footer{
         display: flex;
         flex-direction: column;
         color:white;
-       text-decoration:none;
+        text-decoration:none;
         background-color: black;
         width: 100%;
-        padding-left:20px;
+        padding-left:40px;
         padding-bottom: 10px;
-    
+        padding-top: 30px;
+        margin-top: 40px;
+        font-size: 1.4rem;
         
     li{
         list-style-type: none;

@@ -1,0 +1,92 @@
+//:root {
+ // --pink-light: #ff7eb4;
+ // --pink: #ff2581;
+  //--pinkphasing: linear-gradient(162deg, #ff79da 100%, #9356dc 100%);
+
+.icon {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20;
+  cursor: pointer;
+  width: 1rem;
+  position: relative;
+  svg {
+    width: 1rem;
+    height: 100%; 
+    width: 100%; 
+    left: 0; 
+    top: 0;
+     }
+  //path {
+   ////// transform-origin: center;
+   // &:hover  {
+   //   animation: stroke-animation 0.3s forwards;
+   //   fill: green;
+  }
+.heart i:hover {
+    background: linear-gradient(#9356DC, #FF79DA);
+    color: #fff;
+    font-weight: 600;
+    transform: scale(1.2);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.heart {
+    bottom: 1em;
+    color: #000000;
+    cursor: pointer;
+    font-size: 25px;
+    position: sticky;
+    right: 1em;
+    transition: all .2s ease-in-out;
+}
+.far {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+}
+
+.heart-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    color: linear-gradient(162deg, #ff79da 100%, #7856dc 100%);
+  }
+.heart-main:hover path {
+    animation: stroke-animation 1s forwards;
+    fill:red;
+
+  }
+.heart-main:hover ~ .heart-background path {
+    animation: fade-animation 1s ease-in-out forwards;
+  }
+
+/*@keyframes stroke-animation {
+  0% {
+    stroke: palevioletred;
+    fill:green;
+    transform: scale(1);
+  }
+  30% {
+    color: #ff79da;
+  }
+  60% {
+    stroke: palevioletred;
+    fill: red;
+    transform: scale(1);
+  }
+  80% {
+    fill:violet;
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke: var(--pink);
+    fill: blueviolet;
+  }
+  */
+

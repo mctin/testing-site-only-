@@ -9,3 +9,9 @@ $tertiaire-color:#99E2D0;
 @mixin transition-ease {
     transition: all 0.05s ease-in-out;
 }
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
