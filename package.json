@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood_project_3",
+  "version": "1.0.0",
+  "description": "Project 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mctin/ohmyfood.git"
+  },
+  "author": "therese tinsley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mctin/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/mctin/ohmyfood#readme"
+}
