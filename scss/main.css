@@ -155,6 +155,119 @@ a {
   padding-top: 10px;
 }
 
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsla(0deg, 0%, 100%, 0.9);
+  -webkit-animation: loader 0.01s;
+          animation: loader 0.01s;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__item--1 {
+  background-color: #9356dc;
+}
+
+.loader__item {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  -webkit-animation: jump 1s;
+          animation: jump 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.loader__item--2 {
+  background-color: #ff79da;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.loader__item--3 {
+  background-color: #99e2d0;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@-webkit-keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.loader__itemContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+
+@-webkit-keyframes slideup {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
 .social-icons {
   position: fixed;
   bottom: 1rem;
@@ -169,26 +282,23 @@ a {
 
 .search-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 28px;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  position: relative;
   background-color: lightgray;
   cursor: pointer;
-  transition: all 0.05s ease-in-out;
-}
-.search-form--box {
-  background-color: lightgrey;
-  color: black;
-  border: unset;
-}
-.search-form--box a {
-  color: black;
+  font-size: 700;
 }
 
 .search-form--box {
-  font-size: 24px;
+  font-size: 20px;
   font-family: "roboto" sans-serif;
+}
+
+.localdot {
+  margin-right: 10px;
 }
 
 .explorer-btn_resto {
@@ -226,10 +336,11 @@ a {
 
 .orderCard {
   background: #f6f6f6;
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: rgba(50, 50, 93, 0) 0px 5px 20px 0px, rgba(0, 0, 0, 0.3) -1px 5px 30px -10px;
   border-radius: 2rem;
   margin-left: 1.5rem;
+  margin-top: 2rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -324,6 +435,11 @@ a {
   font-size: 1.6rem;
 }
 
+.titleheart {
+  display: flex;
+  align-content: space-between;
+}
+
 .menuList {
   display: flex;
   flex-direction: column;
@@ -344,10 +460,11 @@ a {
 }
 
 .menuRestaurantImage {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: 200px;
 }
 
 .menuCategoryTitle::after {
@@ -358,6 +475,12 @@ a {
   position: absolute;
   bottom: -1.5rem;
   left: 0;
+}
+
+.menuItem .menuInfo .menuText .menuDetails {
+  font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menuItem {
@@ -381,6 +504,11 @@ a {
   gap: 1rem;
 }
 
+.menuItem:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
 header {
   background: white;
   z-index: 2;
@@ -392,52 +520,53 @@ header {
   position: sticky;
   top: 0;
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
-.header1 ::before {
-  content: "/f060";
-  align-content: left;
-  color: #9356dc;
-  font-weight: 900;
-  display: block;
-}
-
-.backLink {
-  margin-left: 2rem;
+.backarrow {
   position: absolute;
-  cursor: pointer;
+  left: 2rem;
+  width: 2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.backLink::before {
-  content: f060;
-  align-content: left;
-}
-.backLink .header .headerLogo {
+
+.header .headerLogo {
   margin: auto;
   height: 3rem;
 }
-.backLink .menuWrapper {
-  width: 100%;
-  border-radius: 4rem 4rem 0 0;
-  background: whitesmoke;
-  padding: 2rem;
+
+.menuwrapper {
+  max-width: 1280px;
+  margin: auto;
   position: relative;
-  margin-top: -4rem;
 }
-.backLink .menuHeader {
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+  padding: 3rem;
+}
+
+.menuHeader {
   margin-top: 2rem;
   margin-bottom: 4rem;
   align-items: center;
   justify-content: space-between;
 }
-.backLink .menuRestaurantTitle {
+
+.menuRestaurantTitle {
   font-family: "Shrikhand", cursive;
   font-size: 2.5rem;
   font-style: italic;
 }
-.backLink footer {
+
+footer {
   display: flex;
   flex-direction: column;
   color: white;
@@ -450,9 +579,9 @@ header {
   margin-top: 40px;
   font-size: 1.4rem;
 }
-.backLink footer li {
+footer li {
   list-style-type: none;
 }
-.backLink footer a {
+footer a {
   color: white;
 }/*# sourceMappingURL=main.css.map */
