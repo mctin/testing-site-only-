@@ -273,6 +273,27 @@ font-family: 'roboto'sans-serif;
     font-size: 1.6rem;
 }
 //menuboxes//
+.backarrow {
+    position: absolute;
+    left: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    background: white;
+    z-index: 2;
+    font-family: "Shrikhand", cursive;
+    font-size: 2.5rem;
+    height: 6rem;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
 .titleheart {
     display: flex;
     justify-content: space-between;
@@ -281,7 +302,7 @@ font-family: 'roboto'sans-serif;
 .menuList {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 .allMenus {
     display: flex;
@@ -290,6 +311,7 @@ font-family: 'roboto'sans-serif;
 .menuCategoryTitle {
     font-size: 2rem;
     margin-bottom: 1rem;
+    margin-top: 2rem;
     text-transform: uppercase;
     font-weight: 400;
     position: relative;
@@ -309,18 +331,13 @@ font-family: 'roboto'sans-serif;
     bottom: -1.5rem;
     left: 0;
 }
-.menuItem .menuInfo .menuText .menuDetails {
-    font-weight: 200;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 .menuItem {
     background: white;
     height: 7rem;
     border-radius: 15px;
-    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+   @include shadox-box;
     display: flex;
-    animation: slideup 1s forwards;
+    animation: slideup 1.5s forwards;
     opacity: 100;
 }
 .menuItem .menuInfo {
@@ -331,11 +348,54 @@ font-family: 'roboto'sans-serif;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-}  
+} 
+.menuItem .menuInfo .menuText .menuDetails {
+    font-weight: 200;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
 .menuItem:nth-child(2) {
     animation-delay: calc(2s / 5);
 }
-
+.menuItem .menuSelection .checkIcon {
+    width: 3rem;
+    margin-right: 3rem;
+    transform: rotate(360deg);
+    transition: 10s ease-in-out;
+    color: green;
+    background-color: $tertiaire-color;
+}
+.menuSelection:hover{
+    margin-right:0rem;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.menuSelection {
+    background: #99e2d0;
+    cursor: pointer;
+    height: auto;
+    opacity: 0;
+    margin-right:-3rem;
+    overflow: hidden;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease-in-out, width 1.4s ease-in-out, opacity 100 ease-in-out;
+}
 header {
     background: white;
     z-index: 2;
@@ -349,24 +409,6 @@ header {
     justify-content: space-around;
     align-items: center;
     }
-.backarrow {
-        position: absolute;
-        left: 2rem;
-        width: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-}
-//.backLink {
-  //@debug       align-content: left
-.header .headerLogo {
-    margin: auto;
-    height: 3rem;
-}
-//@extend {
-  //  padding: 4rem;
-  //  border-radius: 0;
-
 .menuwrapper {
     max-width: 1280px;
     margin: auto;
@@ -380,8 +422,6 @@ header {
     position: relative;
     padding:3rem
 }
-
-
 .menuHeader {
     margin-top: 2rem;
     margin-bottom: 4rem;

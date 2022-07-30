@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "name": "Run Script: sass",
+            "request": "launch",
+            "command": "npm run sass",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

@@ -15,3 +15,6 @@ $tertiaire-color:#99E2D0;
     box-sizing: inherit;
     scroll-behavior: smooth;
 }
+@mixin shadox-box {
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;   
+}
